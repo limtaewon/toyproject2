@@ -1,0 +1,72 @@
+#BestBoard {
+  margin-top: 30px;
+  width: inherit;
+  #best-header {
+    width: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-bottom: 2px solid #d4d4d4;
+    h2 {
+      font-size: 22px;
+      font-weight: 800;
+    }
+  }
+  #best-contents {
+    width: inherit;
+    padding: 20px 0;
+    ul {
+      li {
+        position: relative;
+        display: flex;
+        padding: 5px 0;
+        margin-bottom: 3px;
+        .board-title {
+          margin: 0 5px 0 0;
+          border: 1px solid #eee;
+          line-height: 18px;
+          box-sizing: border-box;
+          white-space: nowrap;
+          a {
+            position: relative;
+            padding: 0 6px 0 7px;
+            color: #94969b;
+            top: 3px;
+          }
+        }
+        .article-title {
+          line-height: 18px;
+          vertical-align: middle;
+          box-sizing: border-box;
+          white-space: nowrap;
+          font-size: 15px;
+          padding: 3px 120px 3px 0;
+          max-width: calc(100% - 55px);
+
+          overflow: hidden; //글자가 넘어가지 않게 막아주기
+          white-space: nowrap; // 띄어쓰기도 적용시키기
+          text-overflow: ellipsis;
+        }
+        .wrap-info {
+          position: absolute;
+          right: 10px;
+          top: 10px;
+          display: flex;
+          gap: 45px;
+          opacity: 0.4;
+          .thumbup {
+            display: flex;
+            flex-direction: row;
+            gap: 5px;
+          }
+          .comment {
+            display: flex;
+            gap: 5px;
+            flex-direction: row;
+          }
+        }
+      }
+    }
+  }
+}

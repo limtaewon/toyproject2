@@ -1,0 +1,45 @@
+a:link,
+a:visited,
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+a:hover {
+  font-weight: bold;
+}
+body,
+button,
+dd,
+div,
+dl,
+dt,
+fieldset,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+img,
+input,
+legend,
+li,
+ol,
+p,
+pre,
+select,
+table,
+td,
+textarea,
+th,
+ul {
+  margin: 0;
+  padding: 0;
+  color: #222;
+  font-size: 14px;
+  font-family: "Roboto", "Noto Sans KR", AppleSDGothicNeo-Regular,
+    "Malgun Gothic", "맑은 고딕", dotum, "돋움", sans-serif;
+  line-height: 1.25em;
+  word-wrap: break-word;
+}

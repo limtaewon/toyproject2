@@ -1,0 +1,11 @@
+#body {
+  border-top: none;
+  padding: 40px 20px 0;
+  display: flex;
+  -ms-display: flexbox;
+  flex-direction: column;
+  border-top: 1px solid #d4d4d4;
+  max-width: 1140px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
