@@ -39,4 +39,8 @@
 
 ---
 
-![공부내용]("https://user-images.githubusercontent.com/65845022/160271983-94e5021a-0f13-44a2-8671-f7902cf2f779.png");
+<img width="647" alt="JWT" src="https://user-images.githubusercontent.com/65845022/160271983-94e5021a-0f13-44a2-8671-f7902cf2f779.png">
+<img width="639" alt="JWT" src="https://user-images.githubusercontent.com/65845022/160271985-eadc818a-7259-4c30-b6b4-1e60bee612a9.png">
+<img width="689" alt="MONGO DB" src="https://user-images.githubusercontent.com/65845022/160271988-6a112c17-6a16-4e07-9eaf-d03a453573c9.png">
+<img width="589" alt="server" src="https://user-images.githubusercontent.com/65845022/160271990-35f26520-c0fb-498a-bf96-c3c34bcaa8aa.png">
+<img width="590" alt="server" src="https://user-images.githubusercontent.com/65845022/160271991-db8414a2-acd7-41cd-b5e1-eb1a00114b43.png">
