@@ -2,13 +2,14 @@ import "./BestBoard.scss";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { AiFillCrown } from "react-icons/ai";
 import { FiThumbsUp, FiMessageSquare } from "react-icons/fi";
 const BestBoard = () => {
   const [article, setArticle] = useState([]);
 
   useEffect(async () => {
     await axios
-      .get(`http://localhost:8080/article/best/li st`)
+      .get(`http://localhost:8080/article/best/list`)
       .then((res) => {
         setArticle(res);
       })
@@ -18,8 +19,11 @@ const BestBoard = () => {
   return (
     <div id="BestBoard">
       <section id="best-header">
-        <h2>토픽 베스트</h2>
-        <Link to="/board/best">더보기 > </Link>
+        <div>
+          <AiFillCrown size="3em" />
+          <h2>토픽 베스트</h2>
+        </div>
+        <Link to="/board/best">더보기 </Link>
       </section>
       <section id="best-contents">
         <ul>

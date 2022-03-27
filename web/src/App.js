@@ -1,11 +1,13 @@
-import GNB from "./component/GNB/gnb";
-import { Switch, Route } from "react-router-dom";
-import MainPage from "./component/Main/mainpage.js";
 import "./asset/global.scss";
+import "./App.css";
+import GNB from "./component/GNB/gnb";
+import MainPage from "./component/Main/mainpage.js";
+import TopicPage from "./component/Topic/TopicPage";
+import { Switch, Route } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { token } from "./store/modules/user";
+import { useEffect, useState } from "react";
 import axios from "axios";
-import "./App.css";
 
 function App() {
   const dispatch = useDispatch();
@@ -18,6 +20,7 @@ function App() {
     .then((res) => {
       dispatch(token(res));
     });
+
   return (
     <>
       <GNB />
@@ -25,6 +28,9 @@ function App() {
         <Switch>
           <Route exact={true} path="/">
             <MainPage />
+          </Route>
+          <Route exact={true} path="/board/:slug">
+            <TopicPage />
           </Route>
         </Switch>
       </div>

@@ -1,7 +1,7 @@
-#BestBoard {
+.Board {
   margin-top: 30px;
   width: inherit;
-  #best-header {
+  .board-header {
     width: inherit;
     display: flex;
     align-items: center;
@@ -23,7 +23,7 @@
     }
   }
 
-  #best-contents {
+  .board-contents {
     width: inherit;
     padding: 20px 0;
     ul {

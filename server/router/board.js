@@ -5,7 +5,7 @@ const { Board, Article } = require("../database/model");
 //메인페이지에 게시판 목록 띄우기
 router.get("/main", async (req, res) => {
   //find() 한다면 배열형식으로 모든 데이터를 불러온다.
-  const mainboard = await Board.find();
+  const mainboard = await Board.find().sort({ title: 1 });
   //데이터를 다 불러왔는데 배열이 아니라고 뜨면 데이터가 하나도 없는거
   if (!Array.isArray(mainboard)) {
     return res.send({
@@ -19,7 +19,9 @@ router.get("/main", async (req, res) => {
   Promise.all(
     mainboard.map(async (b) => {
       //게시판의 고유 아이디를 통하여 그 게시판의 아이디를 가지고있는 게시글을 배열형태로 불러오기
-      const recentArticle = await Article.find({ board: b._id });
+      const recentArticle = await Article.find({ board: b._id })
+        .sort({ board: 1 })
+        .limit(5);
       //해당 게시판에 게시글이 없다면 오류 출력
       if (!Array.isArray(recentArticle)) {
         return res.send({
@@ -62,7 +64,8 @@ router.post("/board/create", async (req, res) => {
 
 //게시판 게시글 불러오기
 router.get("/board/:slug", async (req, res) => {
-  const { slug } = req.body;
+  const { slug } = req.params;
+
   const board = await Board.findOne({ slug: slug });
   if (!board._id) {
     return res.send({

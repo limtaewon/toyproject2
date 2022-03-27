@@ -1,0 +1,95 @@
+#topic {
+  width: 100%;
+  #select-topicbar {
+    min-width: 1100px;
+    width: inherit;
+    height: 44px;
+    border-bottom: 2px solid #d4d4d4;
+    div {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      gap: 25px;
+      padding: 14px 0;
+      #selecttopic {
+        font-size: 18px;
+        font-weight: 700;
+        color: #000000;
+        line-height: 18px;
+        border-bottom: 2px solid #000000;
+        padding-bottom: 10px;
+      }
+      .notselect {
+        font-size: 18px;
+        color: #94969b;
+        line-height: 18px;
+      }
+    }
+  }
+  #show-topic {
+    #article-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      .article-container {
+        width: 100%;
+        height: 210px;
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid #eee;
+
+        padding: 20px 0;
+        &:nth-child(2n-1) {
+          border-right: 1px solid #eee;
+          padding-right: 20px;
+        }
+        &:nth-child(2n) {
+          padding-left: 20px;
+        }
+        .article-title {
+          height: 52px;
+          margin-top: 1px;
+          font-size: 18px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          word-wrap: break-word;
+          box-sizing: border-box;
+          max-height: 40px;
+          font-weight: 700;
+          line-height: 1.25em;
+          word-break: break-word;
+          margin-bottom: 10px;
+        }
+        .article-content {
+          height: 43px;
+          max-height: 43px;
+          margin-top: 4px;
+          font-size: 14px;
+          line-height: 2em;
+          overflow: hidden;
+          margin-bottom: 16px;
+        }
+        .author-info {
+          font-size: 12px;
+          font-weight: 600;
+          margin-bottom: 10px;
+        }
+        .article-info {
+          position: relative;
+          display: flex;
+          justify-content: space-between;
+          font-size: 15px;
+          opacity: 0.6;
+          .vtc {
+            display: flex;
+            div {
+              display: flex;
+              gap: 3px;
+              font-size: 15px;
+              margin-right: 8px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
